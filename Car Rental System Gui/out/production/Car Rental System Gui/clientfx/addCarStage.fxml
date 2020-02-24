@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientfx.ControllerAddCarStage">
+   <children>
+      <BorderPane layoutX="149.0" layoutY="46.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <GridPane hgap="10.0" vgap="10.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label minWidth="140.0" text="Car ID:" textFill="#005180">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="idCarTxt" onMousePressed="#hide1" promptText="car id must unique " />
+                           </children>
+                        </HBox>
+                        <Label fx:id="idLabel" textFill="#ed6b34" visible="false">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label minWidth="140.0" text="Type:" textFill="#005180">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="typeComboBox" onAction="#typeChoice" prefWidth="150.0" promptText="select car type" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="typeLabel" textFill="#ed6b34" visible="false">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label minWidth="140.0" text="Maker:" textFill="#005180">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="makerTxt" promptText="maker company name" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="makerLabel" textFill="#ed6b34" visible="false">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label minWidth="140.0" text="Model Name:" textFill="#005180">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="modelNameTxt" promptText="model name" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="modelLabel" textFill="#ed6b34" visible="false">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label minWidth="140.0" text="Model Year:" textFill="#005180">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="modelYearComboBox" prefWidth="150.0" promptText="select making year " />
+                           </children>
+                        </HBox>
+                        <Label fx:id="yearLabel" textFill="#ed6b34" visible="false">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label minWidth="140.0" text="Number Of Seats:" textFill="#005180">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="seatsComboBox" prefWidth="150.0" promptText="select number of seats" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="seatsLabel" textFill="#ed6b34" visible="false">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label minWidth="140.0" text="Registration Number:" textFill="#005180">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="registNumberTxt" promptText="from government" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="registrationLabel" textFill="#ed6b34" visible="false">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label minWidth="140.0" text="Identification Number:" textFill="#005180">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="identifNumberTxt" promptText="from manufacturer" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="identificationLabel" textFill="#ed6b34" visible="false">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="4">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label minWidth="140.0" text="Last Meter Reading:" textFill="#005180">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="lastMeterTxt" promptText="from instrument panel" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="meterLabel" textFill="#ed6b34" visible="false">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label minWidth="140.0" text="Cost Per Day:" textFill="#005180">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="costPerDayTxt" promptText="\$/day" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="perDayLabel" textFill="#ed6b34" visible="false">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="5">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label minWidth="140.0" text="Status:" textFill="#005180">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="statusComboBox" prefWidth="150.0" promptText="select availability" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="statusLabel" textFill="#ed6b34" visible="false">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="costPerKmLabel" minWidth="140.0" text="Cost Per Km:" textFill="#005180" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="costPerKmTxt" promptText="\$/km" visible="false" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="perKmLabel" textFill="#ed6b34" visible="false">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="6">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="insurancePerDayLabel" minWidth="140.0" text="Insurance Per Day:" textFill="#005180" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="insurancePerDayTxt" promptText="\$/day" visible="false" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="insuranceLabel" textFill="#ed6b34" visible="false">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <children>
+                        <Label fx:id="addCarLabel" textFill="#ed6b34" visible="false">
+                           <font>
+                              <Font size="11.0" />
+                           </font></Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="7">
+                     <children>
+                        <Label text="*All field must fills" textFill="#616060" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <children>
+                        <Button minHeight="35.0" minWidth="60.0" mnemonicParsing="false" onAction="#addCar" text="Add" textFill="#eb9100">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="30.0" left="10.0" right="10.0" top="20.0" />
+               </BorderPane.margin>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
