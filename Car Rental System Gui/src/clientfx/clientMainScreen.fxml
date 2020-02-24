@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientfx.ControllerClientMainScreen">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <VBox prefHeight="5.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <MenuBar>
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#closeMenuItem" text="Close" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Profile">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#myInformationShow" text="My Information" />
+                              <MenuItem mnemonicParsing="false" onAction="#showAllOrder" text="Show Me All Order" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Order">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#showAllCars" text="Show All Cars" />
+                              <MenuItem mnemonicParsing="false" onAction="#makeAnOrder" text="Make An Order" />
+                        </items>
+                      </Menu>
+                        <Menu mnemonicParsing="false" text="Massage">
+                          <items>
+                              <MenuItem mnemonicParsing="false" onAction="#showMassage" text="Show Massage" />
+                            <MenuItem mnemonicParsing="false" onAction="#sendMassage" text="Send A Massage" />
+                          </items>
+                        </Menu>
+                    </menus>
+                  </MenuBar>
+                  <HBox prefHeight="0.0" prefWidth="600.0">
+                     <children>
+                        <Label fx:id="welcomeLabel" minWidth="200.0" text="Label" textFill="#75a1ff">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="TOP_RIGHT" prefHeight="0.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Hyperlink onAction="#logOut" text="Log Out" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab fx:id="myInformationTab" text="My Information">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane alignment="CENTER" layoutX="192.0" layoutY="129.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label minWidth="125.0" text="Username:" textFill="#2e8fb5">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font></Label>
+                                          <TextField fx:id="usernameShow" editable="false" minWidth="150.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                       <children>
+                                          <Label minWidth="125.0" text="Registration Date:" textFill="#2e8fb5">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font></Label>
+                                          <TextField fx:id="dateShow" editable="false" minWidth="150.0" />
+                                       </children></HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Label minWidth="125.0" text="First Name:" textFill="#2e8fb5">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font></Label>
+                                          <TextField fx:id="firstNameShow" editable="false" minWidth="150.0" />
+                                          <Hyperlink onAction="#editFirstName" text="edit">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font>
+                                          </Hyperlink>
+                                       </children></HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <Label minWidth="125.0" text="Last Name:" textFill="#2e8fb5">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font></Label>
+                                          <TextField fx:id="lastNameShow" editable="false" minWidth="150.0" />
+                                          <Hyperlink onAction="#editLastName" text="edit">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font>
+                                          </Hyperlink>
+                                       </children></HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <Label minWidth="125.0" text="Gender:" textFill="#2e8fb5">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font></Label>
+                                          <TextField fx:id="genderShow" editable="false" minWidth="150.0" />
+                                          <Hyperlink onAction="#editGender" text="edit">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font></Hyperlink>
+                                       </children></HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <children>
+                                          <Label minWidth="125.0" text="Age:" textFill="#2e8fb5">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font></Label>
+                                          <TextField fx:id="ageShow" editable="false" minWidth="150.0" />
+                                          <Hyperlink onAction="#editAge" text="edit">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font>
+                                          </Hyperlink>
+                                       </children></HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                       <children>
+                                          <Label minWidth="125.0" text="Telephone:" textFill="#2e8fb5">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font></Label>
+                                          <TextField fx:id="telephoneShow" editable="false" minWidth="150.0" />
+                                          <Hyperlink onAction="#editTelephone" text="edit">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font>
+                                          </Hyperlink>
+                                       </children></HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <children>
+                                          <Label minWidth="125.0" text="Email:" textFill="#2e8fb5">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font></Label>
+                                          <TextField fx:id="emailShow" editable="false" minWidth="150.0" />
+                                          <Hyperlink onAction="#editEmail" text="edit">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font>
+                                          </Hyperlink>
+                                       </children></HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                       <children>
+                                          <Label minWidth="125.0" text="Address:" textFill="#2e8fb5">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font></Label>
+                                          <TextField fx:id="addressShow" editable="false" minWidth="150.0" />
+                                          <Hyperlink onAction="#editAddress" text="edit">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font>
+                                          </Hyperlink>
+                                       </children></HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <children>
+                                          <Label minWidth="125.0" text="License Validity:" textFill="#2e8fb5">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font></Label>
+                                          <TextField fx:id="licenseShow" editable="false" minWidth="150.0" />
+                                       </children></HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                       <children>
+                                          <Label minWidth="125.0" text="Discount Point:" textFill="#2e8fb5">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font></Label>
+                                          <TextField fx:id="pointShow" editable="false" minWidth="150.0" />
+                                       </children></HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <children>
+                                          <Label minWidth="125.0" text="Status:" textFill="#2e8fb5">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font></Label>
+                                          <TextField fx:id="statusShow" editable="false" minWidth="150.0" />
+                                       </children></HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="6">
+                                       <children>
+                                          <Label minWidth="125.0" text="My Total Bills:" textFill="#2e8fb5">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="myTotalBillsTxt" editable="false" minWidth="150.0" />
+                                       </children></HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="40.0" top="20.0" />
+                                 </padding>
+                              </GridPane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="editFirstNameTab" text="Edit First Name">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <GridPane hgap="10.0" layoutX="165.0" layoutY="103.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <padding>
+                                        <Insets right="80.0" top="20.0" />
+                                    </padding>
+                                    <children>
+                                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                            <children>
+                                                <Label minWidth="120.0" text="First Name:" textFill="#048abf">
+                                                    <font>
+                                                        <Font name="System Bold" size="16.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <children>
+                                                <TextField fx:id="editUserFirstNameTxt" minHeight="30.0" minWidth="180.0" promptText="type first name" />
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2" />
+                                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <children>
+                                                <Label fx:id="editUserFirstNameLabel" textFill="#0045f5" visible="false" />
+                                            </children>
+                                        </HBox>
+                                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <children>
+                                                <Button minHeight="35.0" minWidth="70.0" mnemonicParsing="false" onAction="#editUserFirstName" text="Edit" textFill="#01d02a">
+                                                    <font>
+                                                        <Font name="System Bold" size="14.0" />
+                                                    </font>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </GridPane>
+                            </children></AnchorPane>
+                    </content>
+                </Tab>
+                  <Tab fx:id="editUserLastNameTab" text="Edit Last Name">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                              <children>
+                                  <GridPane hgap="10.0" layoutX="165.0" layoutY="103.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                      <padding>
+                                          <Insets right="80.0" top="20.0" />
+                                      </padding>
+                                      <children>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                              <children>
+                                                  <Label minWidth="120.0" text="Last Name:" textFill="#048abf">
+                                                      <font>
+                                                          <Font name="System Bold" size="16.0" />
+                                                      </font>
+                                                  </Label>
+                                              </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                              <children>
+                                                  <TextField fx:id="editUserLastNameTxt" minHeight="30.0" minWidth="180.0" promptText="type last name" />
+                                              </children>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2" />
+                                          <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                              <children>
+                                                  <Label fx:id="editUserLastNameLabel" textFill="#0045f5" visible="false" />
+                                              </children>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                              <children>
+                                                  <Button minHeight="35.0" minWidth="70.0" mnemonicParsing="false" onAction="#editUserLastName" text="Edit" textFill="#01d02a">
+                                                      <font>
+                                                          <Font name="System Bold" size="14.0" />
+                                                      </font>
+                                                  </Button>
+                                              </children>
+                                          </HBox>
+                                      </children>
+                                  </GridPane>
+                              </children></AnchorPane>
+                      </content>
+                  </Tab>
+                  <Tab fx:id="editUserGenderTab" text="Edit User Gender">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                              <children>
+                                  <GridPane hgap="10.0" layoutX="165.0" layoutY="103.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                      <padding>
+                                          <Insets right="80.0" top="20.0" />
+                                      </padding>
+                                      <children>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                              <children>
+                                                  <Label minWidth="120.0" text="Gender:" textFill="#048abf">
+                                                      <font>
+                                                          <Font name="System Bold" size="16.0" />
+                                                      </font>
+                                                  </Label>
+                                              </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                              <children>
+                                                  <ComboBox fx:id="editUserGenderComboBox" minHeight="30.0" minWidth="180.0" prefWidth="150.0" promptText="select gender" />
+                                              </children>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2" />
+                                          <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                              <children>
+                                                  <Label fx:id="editUserGenderLabel" textFill="#0045f5" visible="false" />
+                                              </children>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                              <children>
+                                                  <Button minHeight="35.0" minWidth="70.0" mnemonicParsing="false" onAction="#editUserGender" text="Edit" textFill="#01d02a">
+                                                      <font>
+                                                          <Font name="System Bold" size="14.0" />
+                                                      </font>
+                                                  </Button>
+                                              </children>
+                                          </HBox>
+                                      </children>
+                                  </GridPane>
+                              </children></AnchorPane>
+                      </content>
+                  </Tab>
+                  <Tab fx:id="editUserTelephoneTab" text="Edit User Telephone">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                              <children>
+                                  <GridPane alignment="CENTER_RIGHT" hgap="10.0" layoutX="165.0" layoutY="103.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                      <padding>
+                                          <Insets right="80.0" top="20.0" />
+                                      </padding>
+                                      <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                              <children>
+                                                  <TextField fx:id="editUserTelephoneTxt" minHeight="30.0" minWidth="180.0" promptText="type telephone number" />
+                                              </children>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2" />
+                                          <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                              <children>
+                                                  <Label fx:id="editUserTelephoneLabel" textFill="#0045f5" visible="false" />
+                                              </children>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                              <children>
+                                                  <Button minHeight="35.0" minWidth="70.0" mnemonicParsing="false" onAction="#editUserTelephone" text="Edit" textFill="#01d02a">
+                                                      <font>
+                                                          <Font name="System Bold" size="14.0" />
+                                                      </font>
+                                                  </Button>
+                                              </children>
+                                          </HBox>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Label text="Telephone:" textFill="#048abf">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                      </children>
+                                  </GridPane>
+                              </children></AnchorPane>
+                      </content>
+                  </Tab>
+                  <Tab fx:id="editUserEmailTab" text="Edit User Email">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                              <children>
+                                  <GridPane hgap="10.0" layoutX="165.0" layoutY="103.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                      <padding>
+                                          <Insets right="80.0" top="20.0" />
+                                      </padding>
+                                      <children>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                              <children>
+                                                  <Label minWidth="120.0" text="Email:" textFill="#048abf">
+                                                      <font>
+                                                          <Font name="System Bold" size="16.0" />
+                                                      </font>
+                                                  </Label>
+                                              </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                              <children>
+                                                  <TextField fx:id="editUserEmailTxt" minHeight="30.0" minWidth="180.0" promptText="type email" />
+                                              </children>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2" />
+                                          <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                              <children>
+                                                  <Label fx:id="editUserEmailLabel" textFill="#0045f5" visible="false" />
+                                              </children>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                              <children>
+                                                  <Button minHeight="35.0" minWidth="70.0" mnemonicParsing="false" onAction="#editUserEmail" text="Edit" textFill="#01d02a">
+                                                      <font>
+                                                          <Font name="System Bold" size="14.0" />
+                                                      </font>
+                                                  </Button>
+                                              </children>
+                                          </HBox>
+                                      </children>
+                                  </GridPane>
+                              </children></AnchorPane>
+                      </content>
+                  </Tab>
+                  <Tab fx:id="editAddressTab" text="Edit Address">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                              <children>
+                                  <GridPane hgap="10.0" layoutX="165.0" layoutY="103.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                      <padding>
+                                          <Insets right="80.0" top="20.0" />
+                                      </padding>
+                                      <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                              <children>
+                                                  <TextField fx:id="editAddressTxt" minHeight="30.0" minWidth="180.0" promptText="type address" />
+                                              </children>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2" />
+                                          <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                              <children>
+                                                  <Label fx:id="editAddressLabel" textFill="#0045f5" visible="false" />
+                                              </children>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                              <children>
+                                                  <Button minHeight="35.0" minWidth="70.0" mnemonicParsing="false" onAction="#editUserAddress" text="Edit" textFill="#01d02a">
+                                                      <font>
+                                                          <Font name="System Bold" size="14.0" />
+                                                      </font>
+                                                  </Button>
+                                              </children>
+                                          </HBox>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Label text="Address:" textFill="#048abf">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                      </children>
+                                  </GridPane>
+                              </children></AnchorPane>
+                      </content>
+                  </Tab>
+                  <Tab fx:id="editAgeTab" text="Edit Age">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                              <children>
+                                  <GridPane hgap="10.0" layoutX="165.0" layoutY="103.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                      <padding>
+                                          <Insets right="80.0" top="20.0" />
+                                      </padding>
+                                      <children>
+                                          <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                              <children>
+                                                  <Label minWidth="120.0" text="Age:" textFill="#048abf">
+                                                      <font>
+                                                          <Font name="System Bold" size="16.0" />
+                                                      </font>
+                                                  </Label>
+                                              </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                              <children>
+                                                  <ComboBox fx:id="editAgeYearComboBox" prefWidth="150.0" promptText="Year" />
+                                                  <Label text="/">
+                                                      <font>
+                                                          <Font name="System Bold" size="16.0" />
+                                                      </font>
+                                                  </Label>
+                                                  <ComboBox fx:id="editAgeMonthComboBox" onAction="#editAgeDayMonth" prefWidth="150.0" promptText="Month" />
+                                                  <Label text="/">
+                                                      <font>
+                                                          <Font name="System Bold" size="16.0" />
+                                                      </font>
+                                                  </Label>
+                                                  <ComboBox fx:id="editAgeDayComboBox" prefWidth="150.0" promptText="Day" />
+                                              </children>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2" />
+                                          <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                              <children>
+                                                  <Label fx:id="editAgeLabel" textFill="#0045f5" visible="false" />
+                                              </children>
+                                          </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                              <children>
+                                                  <Button minHeight="35.0" minWidth="70.0" mnemonicParsing="false" onAction="#editUserAge" text="Edit" textFill="#01d02a">
+                                                      <font>
+                                                          <Font name="System Bold" size="14.0" />
+                                                      </font>
+                                                  </Button>
+                                              </children>
+                                          </HBox>
+                                      </children>
+                                  </GridPane>
+                              </children></AnchorPane>
+                      </content>
+                  </Tab>
+                  <Tab fx:id="welcomeTab" text="Welcome">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER" layoutX="290.0" layoutY="69.0" prefHeight="200.0" prefWidth="100.0" spacing="120.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label text="You Can Rent A Car With Few Steps ...... We Glad To Serve You" textFill="#38c789">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#welcomeMakeARent" text="Make Your Rent" textFill="#eebf3f">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children></VBox>
+                           </children></AnchorPane>
+                      </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </center></BorderPane>
+   </children>
+</AnchorPane>

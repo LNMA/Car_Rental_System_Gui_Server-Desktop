@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientfx.ControllerRegistration">
+   <children>
+      <BorderPane layoutX="137.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab fx:id="signUpMenuItem" text="Sign Up">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane alignment="CENTER" hgap="15.0" layoutX="200.0" layoutY="128.0" vgap="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <padding>
+                                    <Insets bottom="50.0" right="100.0" top="20.0" />
+                                 </padding>
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="*" textFill="RED">
+                                             <HBox.margin>
+                                                <Insets bottom="7.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label minWidth="85.0" text="Username:" textFill="#309fff">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font></Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                       <children>
+                                          <TextField fx:id="usernameUp" minHeight="30.0" minWidth="180.0" onMousePressed="#clear1" promptText="More than 3 characters" />
+                                          <Label fx:id="usernameLabel" textFill="RED" visible="false">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Label text="*" textFill="RED" />
+                                          <Label minWidth="85.0" text="Password:" textFill="#309fff">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font></Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <PasswordField fx:id="passwordUp" minHeight="30.0" minWidth="180.0" onMousePressed="#clear2" promptText="More than 5 characters" />
+                                          <Label fx:id="passwordLabel" textFill="RED" visible="false">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <Label minWidth="85.0" text="First name:" textFill="#309fff">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <children>
+                                          <TextField fx:id="firstNameUp" minHeight="30.0" minWidth="180.0" promptText="Type your first name" />
+                                          <Label fx:id="firstNameLabel" textFill="RED" visible="false">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                       <children>
+                                          <Label minWidth="85.0" text="Last name:" textFill="#309fff">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children></HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <children>
+                                          <TextField fx:id="lastNameUp" minHeight="30.0" minWidth="180.0" promptText="Type your last name" />
+                                          <Label fx:id="lastNameLabel" textFill="RED" visible="false">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Label>
+                                       </children></HBox>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                       <children>
+                                          <Label text="*" textFill="RED">
+                                             <HBox.margin>
+                                                <Insets bottom="7.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label minWidth="85.0" text="Gender:" textFill="#309fff">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <children>
+                                          <ComboBox fx:id="genderComboBox" minHeight="30.0" minWidth="180.0" prefWidth="150.0" promptText="Select your gender" />
+                                          <Label fx:id="genderLabel" text="Label" textFill="RED" visible="false">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                       <children>
+                                          <Label text="*" textFill="RED">
+                                             <HBox.margin>
+                                                <Insets bottom="7.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label minWidth="85.0" text="Age:" textFill="#309fff">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <children>
+                                          <ComboBox fx:id="yearComboBox" minHeight="28.0" minWidth="60.0" promptText="Year" />
+                                          <Label text=" / ">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="monthComboBox" minHeight="28.0" minWidth="60.0" onAction="#monthDay" promptText="Month" />
+                                          <Label layoutX="90.0" layoutY="10.0" text=" / ">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="dayComboBox" minHeight="28.0" minWidth="60.0" promptText="Day" />
+                                          <Label fx:id="ageLabel" text="Label" textFill="RED" visible="false">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="6">
+                                       <children>
+                                          <Label minWidth="85.0" text="Telephone:" textFill="#309fff">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                       <children>
+                                          <TextField fx:id="telephoneUp" minHeight="30.0" minWidth="180.0" promptText="Type your telephone number" />
+                                          <Label fx:id="telephoneLabel" textFill="RED" visible="false">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="7">
+                                       <children>
+                                          <Label minWidth="85.0" text="E-mail:" textFill="#309fff">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                       <children>
+                                          <TextField fx:id="emailUp" minHeight="30.0" minWidth="180.0" promptText="Type your email" />
+                                          <Label fx:id="emailLabel" textFill="RED" visible="false">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="8">
+                                       <children>
+                                          <Label minWidth="85.0" text="Address:" textFill="#309fff">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                       <children>
+                                          <TextField fx:id="addressUp" minHeight="30.0" minWidth="180.0" promptText="Where you live?" />
+                                          <Label fx:id="addressLabel" textFill="RED" visible="false">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font></Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="9">
+                                       <children>
+                                          <Label text="* must fills" textFill="#8c9a9e" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="0.0" prefWidth="242.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                       <children>
+                                          <Button minHeight="30.0" minWidth="65.0" mnemonicParsing="false" onAction="#signUp" text="Sign Up" textFill="#ff9712">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Button>
+                                          <HBox>
+                                             <children>
+                                                <Label fx:id="notifySignUp" minWidth="300.0" text="Label" textFill="RED" visible="false">
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font></Label>
+                                             </children>
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </GridPane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="signInMenuItem" text="Sign In">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane alignment="CENTER" hgap="15.0" layoutX="143.0" layoutY="121.0" vgap="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label minWidth="85.0" text="Username:" textFill="#309fff">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                       <children>
+                                          <TextField fx:id="usernameIn" minHeight="30.0" minWidth="180.0" onMousePressed="#clear3" promptText="Type your username" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox alignment="TOP_RIGHT" prefHeight="13.0" prefWidth="100.0">
+                                                   <children>
+                                                      <Label minWidth="85.0" text="Password:" textFill="#309fff">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_RIGHT" prefHeight="84.0" prefWidth="100.0">
+                                                   <children>
+                                                      <ProgressIndicator fx:id="indicator" prefHeight="71.0" prefWidth="25.0" visible="false" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <HBox prefHeight="10.0" prefWidth="292.0">
+                                             <children>
+                                                <PasswordField fx:id="passwordIn" minHeight="30.0" minWidth="180.0" onMousePressed="#clear4" promptText="Type your password" />
+                                             </children></HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" spacing="2.0">
+                                             <children>
+                                                <Button minHeight="30.0" minWidth="65.0" mnemonicParsing="false" onAction="#signIn" text="Sign In" textAlignment="CENTER" textFill="#00a11e">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Button>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label fx:id="notifySignIn" minWidth="400.0" textFill="RED" visible="false" />
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="30.0" right="60.0" />
+                                 </padding>
+                              </GridPane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                 <Tab fx:id="changeUsernameTab" text="Change Username">
+                    <content>
+                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <children>
+                             <GridPane alignment="CENTER" hgap="15.0" layoutX="143.0" layoutY="121.0" vgap="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <children>
+                                   <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                      <children>
+                                         <Label minWidth="115.0" text="Old Username:" textFill="#309fff">
+                                            <font>
+                                               <Font name="System Bold" size="16.0" />
+                                            </font>
+                                         </Label>
+                                      </children>
+                                   </HBox>
+                                   <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                      <children>
+                                          <TextField fx:id="changeUsernameOldUsernameTxt" layoutX="10.0" layoutY="72.0" minHeight="30.0" minWidth="180.0" onMousePressed="#hideChangeUsernameLabel1" promptText="Type your old username" />
+                                      </children>
+                                   </HBox>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                         <Label minWidth="115.0" text="New Username:" textFill="#309fff">
+                                            <font>
+                                               <Font name="System Bold" size="16.0" />
+                                            </font>
+                                         </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                         <TextField fx:id="changeUsernameNewUsernameTxt" minHeight="30.0" minWidth="180.0" onMousePressed="#hideChangeUsernameLabel2" promptText="Type your new username" />
+                                       </children>
+                                    </HBox>
+                                   <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                      <children>
+                                         <VBox prefHeight="200.0" prefWidth="100.0">
+                                            <children>
+                                               <HBox alignment="TOP_RIGHT" prefHeight="13.0" prefWidth="100.0">
+                                                  <children>
+                                                      <Label layoutX="25.0" layoutY="10.0" minWidth="115.0" text="Password:" textFill="#309fff">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                  </children>
+                                               </HBox>
+                                            </children>
+                                         </VBox>
+                                      </children>
+                                   </HBox>
+                                   <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                      <children>
+                                         <HBox prefHeight="10.0" prefWidth="292.0">
+                                            <children>
+                                               <PasswordField fx:id="changeUsernamePasswordTxt" minHeight="30.0" minWidth="180.0" promptText="Type your password" />
+                                            </children></HBox>
+                                         <HBox prefHeight="100.0" prefWidth="200.0" spacing="2.0">
+                                            <children>
+                                               <Button minHeight="30.0" minWidth="65.0" mnemonicParsing="false" onAction="#changeUsernameOldUsernameEvent" text="Change" textAlignment="CENTER" textFill="#5100a1">
+                                                  <font>
+                                                     <Font name="System Bold" size="13.0" />
+                                                  </font>
+                                               </Button>
+                                               <HBox prefHeight="100.0" prefWidth="200.0">
+                                                  <children>
+                                                     <Label fx:id="changeUsernameLabel" minWidth="400.0" textFill="RED" visible="false" />
+                                                  </children>
+                                                  <HBox.margin>
+                                                     <Insets top="5.0" />
+                                                  </HBox.margin>
+                                               </HBox>
+                                            </children>
+                                         </HBox>
+                                      </children>
+                                   </VBox>
+                                </children>
+                                <padding>
+                                   <Insets bottom="30.0" right="60.0" />
+                                </padding>
+                             </GridPane>
+                          </children></AnchorPane>
+                    </content>
+                 </Tab>
+                 <Tab fx:id="changePasswordTab" text="Change Password">
+                    <content>
+                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <children>
+                             <GridPane alignment="CENTER" hgap="15.0" layoutX="143.0" layoutY="121.0" vgap="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <children>
+                                   <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                      <children>
+                                          <Label layoutX="188.0" layoutY="49.0" minWidth="180.0" text="Username:" textFill="#309fff">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                      </children>
+                                   </HBox>
+                                   <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                      <children>
+                                          <TextField fx:id="changePasswordUsernameTxt" layoutX="10.0" layoutY="44.0" minHeight="30.0" minWidth="180.0" onMousePressed="#hideChangePasswordLabel" promptText="Type your username" />
+                                      </children>
+                                   </HBox>
+                                    <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                         <Label minWidth="180.0" text="Old Password:" textFill="#309fff">
+                                            <font>
+                                               <Font name="System Bold" size="16.0" />
+                                            </font>
+                                         </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <PasswordField fx:id="changePasswordOldPasswordTxt" minHeight="30.0" minWidth="180.0" onMousePressed="#hideChangePasswordLabel1" promptText="Type your old password" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <Label layoutX="10.0" layoutY="10.0" minWidth="180.0" text="Reinput Old Password:" textFill="#309fff">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <children>
+                                          <PasswordField fx:id="changePasswordOldPasswordTxt1" minHeight="30.0" minWidth="180.0" promptText="Type your old password" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                       <children>
+                                          <Label minWidth="180.0" text="New Password:" textFill="#309fff">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <children>
+                                          <PasswordField fx:id="changePasswordNewPasswordTxt" minHeight="30.0" minWidth="180.0" promptText="Type your new password" />
+                                       </children>
+                                    </HBox>
+                                   <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                      <children>
+                                         <VBox prefHeight="200.0" prefWidth="100.0">
+                                            <children>
+                                               <HBox alignment="TOP_RIGHT" prefHeight="13.0" prefWidth="100.0">
+                                                  <children>
+                                                     <Label minWidth="180.0" text="Reinput New Password:" textFill="#309fff">
+                                                        <font>
+                                                           <Font name="System Bold" size="16.0" />
+                                                        </font>
+                                                     </Label>
+                                                  </children>
+                                               </HBox>
+                                            </children>
+                                         </VBox>
+                                      </children>
+                                   </HBox>
+                                   <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                      <children>
+                                         <HBox prefHeight="10.0" prefWidth="292.0">
+                                            <children>
+                                               <PasswordField fx:id="changePasswordNewPasswordTxt1" minHeight="30.0" minWidth="180.0" promptText="Type your new password" />
+                                            </children></HBox>
+                                         <HBox prefHeight="100.0" prefWidth="200.0" spacing="2.0">
+                                            <children>
+                                               <Button minHeight="30.0" minWidth="65.0" mnemonicParsing="false" onAction="#changePasswordEvent" text="Change" textAlignment="CENTER" textFill="#5100a1">
+                                                  <font>
+                                                     <Font name="System Bold" size="13.0" />
+                                                  </font>
+                                               </Button>
+                                               <HBox prefHeight="100.0" prefWidth="200.0">
+                                                  <children>
+                                                     <Label fx:id="changePasswordLabel" minWidth="400.0" textFill="RED" visible="false" />
+                                                  </children>
+                                                  <HBox.margin>
+                                                     <Insets top="5.0" />
+                                                  </HBox.margin>
+                                               </HBox>
+                                            </children>
+                                         </HBox>
+                                      </children>
+                                   </VBox>
+                                </children>
+                                <padding>
+                                   <Insets bottom="30.0" right="60.0" top="20.0" />
+                                </padding>
+                             </GridPane>
+                          </children></AnchorPane>
+                    </content>
+                 </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+         <top>
+            <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#closeRegistrationStage" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Registration ">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#signUpTapShow" text="Sign Up" />
+                        <MenuItem mnemonicParsing="false" onAction="#signInTapShow" text="Sign In" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Account">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#showChangeUsername" text="Change Username" />
+                        <MenuItem mnemonicParsing="false" onAction="#showChangePassword" text="Change Password" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+                    </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

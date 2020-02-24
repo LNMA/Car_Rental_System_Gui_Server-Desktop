@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientfx.ControllerShowAllCarStage">
+   <children>
+      <BorderPane fx:id="borderPane" layoutX="168.0" layoutY="60.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="carID" prefWidth="75.0" text="Car ID" />
+                <TableColumn fx:id="dateCreate" prefWidth="75.0" text="Date Create" />
+                  <TableColumn fx:id="type" prefWidth="75.0" text="Type" />
+                  <TableColumn fx:id="maker" prefWidth="75.0" text="Maker" />
+                  <TableColumn fx:id="model" prefWidth="75.0" text="Model" />
+                  <TableColumn fx:id="modelYear" prefWidth="75.0" text="Year" />
+                  <TableColumn fx:id="numberOfSeats" prefWidth="75.0" text="Seats" />
+                  <TableColumn fx:id="registration" prefWidth="75.0" text="Registration" />
+                  <TableColumn fx:id="identification" prefWidth="75.0" text="Identification" />
+                  <TableColumn fx:id="lastMeter" prefWidth="75.0" text="Last Meter" />
+                  <TableColumn fx:id="costPerDay" prefWidth="75.0" text="Cost Per Day" />
+                  <TableColumn fx:id="costPerKmSedan" prefWidth="75.0" text="Cost Per Km Sedan" />
+                  <TableColumn fx:id="costPerKmVan" prefWidth="75.0" text="Cost Per Km Van" />
+                  <TableColumn fx:id="insurance" prefWidth="75.0" text="Insurance Per Day" />
+                  <TableColumn fx:id="status" prefWidth="75.0" text="Status" />
+              </columns>
+            </TableView>
+         </center></BorderPane>
+   </children>
+</AnchorPane>
