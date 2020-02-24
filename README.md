@@ -1,5 +1,5 @@
 # Car-Rental-System-Gui-Server-Desktop-
-program future review : 
+-program future review : 
 1.massage and notification system between users.
 
 2.Three type of user :root, supervisor, customer. 
@@ -53,7 +53,8 @@ program future review :
 26.And many more …………………                 
 
 
-you have two way to run program : 
+
+-you have two way to run program : 
 
 1.before all make sure you have mysql database . 
 
