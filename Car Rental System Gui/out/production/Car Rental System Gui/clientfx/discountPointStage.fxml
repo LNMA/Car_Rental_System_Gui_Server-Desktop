@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientfx.ControllerDiscountPointStage">
+   <children>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="85.0" prefWidth="600.0">
+               <children>
+                  <Label text="You have   " textFill="#6a458f">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="pointTxt" editable="false" minHeight="30.0" minWidth="140.0" />
+                  <Label text="   Point" textFill="#6a458f">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="0.0" prefWidth="600.0">
+               <children>
+                  <Label text="Would you like to use it:" textFill="#6a458f">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="72.0" prefWidth="600.0" spacing="120.0">
+               <children>
+                  <RadioButton fx:id="yesRadio" mnemonicParsing="false" onAction="#yesChoose" text="Yes" textFill="#11d081">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="noRadio" mnemonicParsing="false" onAction="#noChoose" text="No" textFill="#11d081">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ComboBox fx:id="pointComboBox" minHeight="30.0" minWidth="140.0" promptText="choose a number" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="89.0" prefWidth="600.0">
+               <children>
+                  <Button minHeight="35.0" minWidth="100.0" mnemonicParsing="false" onAction="#letsDoIt" text="Let's Do IT" textFill="#ff3881">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

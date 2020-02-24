@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="clientfx.ControllerShowOrderByCarID" prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columns>
+                <TableColumn fx:id="username" prefWidth="75.0" text="Username" />
+                <TableColumn fx:id="carId" prefWidth="75.0" text="Car ID" />
+                <TableColumn fx:id="orderId" prefWidth="75.0" text="Order ID" />
+                <TableColumn fx:id="dateCreate" prefWidth="75.0" text="Date Create" />
+                <TableColumn fx:id="day" prefWidth="75.0" text="Day" />
+                <TableColumn fx:id="tripDistance" prefWidth="75.0" text="Trip Distance" />
+                <TableColumn fx:id="paymentMethod" prefWidth="75.0" text="Payment Method" />
+                <TableColumn fx:id="bill" prefWidth="75.0" text="Bill" />
+                <TableColumn fx:id="carType" prefWidth="75.0" text="Car Type" />
+                <TableColumn fx:id="carMaker" prefWidth="75.0" text="Car Maker" />
+                <TableColumn fx:id="carModel" prefWidth="75.0" text="Car Model" />
+                <TableColumn fx:id="carModelYear" prefWidth="75.0" text="Car Model Year" />
+                <TableColumn fx:id="carNumberOfSeats" prefWidth="75.0" text="Seats" />
+                <TableColumn fx:id="carRegistrationNumber" prefWidth="75.0" text="Car Registration Number" />
+                <TableColumn fx:id="carIdentificationNumber" prefWidth="75.0" text="Car Identification Number" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

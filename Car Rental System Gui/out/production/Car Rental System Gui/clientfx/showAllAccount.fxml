@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientfx.ControllerShowAllAccount">
+    <children>
+        <BorderPane fx:id="borderPane" layoutX="168.0" layoutY="60.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="username" prefWidth="75.0" text="Username" />
+                        <TableColumn fx:id="password" prefWidth="75.0" text="Password" />
+                        <TableColumn fx:id="type" prefWidth="75.0" text="Type" />
+                        <TableColumn fx:id="dateCreate" prefWidth="75.0" text="Date Create" />
+                        <TableColumn fx:id="firstName" prefWidth="75.0" text="First Name" />
+                        <TableColumn fx:id="lastName" prefWidth="75.0" text="Last Name" />
+                        <TableColumn fx:id="gender" prefWidth="75.0" text="Gender" />
+                        <TableColumn fx:id="age" prefWidth="75.0" text="Age" />
+                        <TableColumn fx:id="telephone" prefWidth="75.0" text="Telephone" />
+                        <TableColumn fx:id="email" prefWidth="75.0" text="Email" />
+                        <TableColumn fx:id="address" prefWidth="75.0" text="Address" />
+                        <TableColumn fx:id="status" prefWidth="75.0" text="Status" />
+                        <TableColumn fx:id="licenseValidity" prefWidth="75.0" text="License Validity" />
+                        <TableColumn fx:id="discountPoint" prefWidth="75.0" text="Discount Point" />
+                  <TableColumn fx:id="totalBills" prefWidth="75.0" text="Total Bills" />
+                        <TableColumn fx:id="section" prefWidth="75.0" text="Section" />
+                        <TableColumn fx:id="rank" prefWidth="75.0" text="Rank" />
+                    </columns>
+                </TableView>
+            </center></BorderPane>
+    </children>
+</AnchorPane>
