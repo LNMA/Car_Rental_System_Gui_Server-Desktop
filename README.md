@@ -58,6 +58,8 @@
 
 1.before all make sure you have mysql database . 
 
-2.then import dumps that attachment.
+2.then import mysql dumps that attachment.
 
-3.take all file "Car Rental System gui" and run it. 4.default ide intellij. 
+3.manually add (connector j) to the dependancy, I did not used any build automation tool in this project.
+
+4.take all file "Car Rental System gui" and run it. 4.default ide intellij. 
